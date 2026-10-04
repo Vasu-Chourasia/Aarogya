@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: aarogya-healthcare-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn aarogya.api.app:create_app --factory --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: AAROGYA_EXECUTION_MODE
+        value: SIMULATION
+      - key: AAROGYA_LIVE_EXECUTION_ENABLED
+        value: "false"
+      - key: AAROGYA_API_AUTH_ENABLED
+        value: "true"
+      - key: AAROGYA_API_KEY
+        generateValue: true
+      - key: GNANI_VOICE_PROVIDER_MODE
+        value: mock
+      - key: PHARMACY_ENVIRONMENT
+        value: mock
+      - key: PHARMACY_LIVE_OPERATIONS_ENABLED
+        value: "false"

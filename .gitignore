@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+.operator_api_key.txt
+aarogya_audit.log
+*.db-shm
+*.db-wal
+.pytest_cache/
+scratch/
+

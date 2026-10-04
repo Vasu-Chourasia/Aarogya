@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.env
+aarogya_audit.log
+*.db-journal
+*.db-shm
+*.db-wal
+scratch/
+.git
